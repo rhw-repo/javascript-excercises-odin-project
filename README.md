@@ -1,0 +1,1 @@
+Writing javascript functions to test. Tests and tasks provided by The Odin Project, task is to write the JS in order to pass each task through multiple tests. 
