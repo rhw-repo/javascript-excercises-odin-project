@@ -1,0 +1,13 @@
+Declare a function called sumAll
+
+Give it the arguments in the parentheses of (num1, num2)
+
+
+Write a codeblock within the function body {} that: 
+
+	Checks if num1 bigger than num2, if so, swaps them around 
+	Checks if input is a not a number (and therefore returns "ERROR")
+	Checks if input is a string, which might contain number (and therefore returns "ERROR")
+	Returns the sum of every number between(and including) num1 and num2
+
+Call the function via the test (which gives it the parameters I want it to work with). 
