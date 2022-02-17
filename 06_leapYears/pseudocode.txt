@@ -1,0 +1,17 @@
+1. Create a function, call it leapYears, give it (number) as argument 
+2. If the year (number) is divisible by 4 AND if is also NOT divisible by 100, then return true
+3. If it is divisible by 4 AND if it is divisble by 100 AND if it is divisible by 400, then return true 
+4. Else return false 
+5. Test calls leapYears 6 times, each time passes a different year to it, each year is chosen to verify leapYears() checks the various conditions set out in 2. and 3:
+
+works with non-century numbers?
+1996 (true)- it is a leap year because it divides by 4 and does not divide by 100
+1997 (false) - it is not a leap year because it does not divide by 4
+
+works with futuristic non-century years?
+34992 (true) - it is a leap year because it divides by 4 and does not divide by 100
+
+works with century years?
+1900 (false)  - it is not a leap year because it divides by 4 and divides by 100 but does not divide by 400
+1600 (true)  - it is a leap year because it divides by 4 and divides by 100 and divides by 400
+700 (false) - it is not a leap year because it divides by 4 and divides by 100 but does not divide by 400   
