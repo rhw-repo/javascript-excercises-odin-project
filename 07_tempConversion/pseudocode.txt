@@ -1,0 +1,28 @@
+1. Create function, call it ftoc, give it (number) as argument
+	
+2. Convert temperatures from Fahrenheit to Celsius, store the result in a variable called result; formula to convert is [°C] = ([°F] − 32) × 5⁄9 
+(5/9 is fraction, can convert to decimal by dividing 5 by 9 which is 0.55555555555556 or use it as 5 / 9)
+  
+3. Round off value of result to one decimal place, store in a variable called celcius
+
+4. 32 fahrenheit to celsius should return 0 check ouput in console 
+ 
+5. If correct ouput, return (celcius)
+ 
+6. Call function pass it various degrees farenheit (as numbers) inc with 1 decimcal place, check output in console
+
+7. Copy paste to create another function, change function name to ctof, change variable name farenheight to celcius and vice versa  
+ 
+8. Change code block to convert temperatures from Celsius to Fahrenheit, store in a variable called result; formula to convert is [°F] = [°C] × 9⁄5 + 32
+
+9. Round off value of result to one decimal place, store in the variable called farenheight
+
+10. 0 celsius to fahrenheit should return 32, check output in console, call function with various numbers 
+
+11. If correct ouput, return (farenheight)
+
+12. Call function pass it various degrees celcius (as numbers) inc with 1 decimcal place, check output in console
+
+13. Delete both function calls to allow test to call and pass values to functions 
+ 
+ 
