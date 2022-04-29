@@ -1,0 +1,58 @@
+ 1. Define parameters: 
+
+ Accepts an array of unknown length = resting parameter creates array 
+ // removeFromArray = function(...args) 
+
+ Test checks:
+
+> jest "removeFromArray.spec.js"
+
+ PASS  04_removeFromArray/removeFromArray.spec.js
+  removeFromArray
+    ✓ removes a single value (4 ms)
+    ✓ removes multiple values (1 ms)
+    ✓ ignores non present values (1 ms)
+    ✓ ignores non present values, but still works (3 ms)
+    ✓ can remove all values (1 ms)
+    ✓ works with strings (1 ms)
+    ✓ only removes same type (1 ms)
+
+2. Use an array method that allows for unknown length (tests supply input)
+- pop(), push() slice(), splice() unsuitable: loops required hard coded values 
+
+
+- filter() could filter out non-present values 
+does not change original array
+makes new array whose elements pass a test provided by function 
+
+Prefered Odin Project Solution #2 combines filter() with array method includes()
+
+- includes() returns true IF an array contains a value that you define 
+if that value is not in the array, returns false 
+set the value as val which is not included in the array 
+
+var removeFromArray = function(...args) {
+const array = args[0]
+return array.filter(val => !args.includes(val))
+}
+
+test supplied by function is filter values for those not included in the array, therefore the new array returned will only include values 
+which were in the array, but not present in the arguments passed to the function outside the array 
+
+  test('removes a single value', () => {
+    expect(removeFromArray([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
+  });
+
+  new array returned is 
+  [1, 2, 4] // because all present in original array [1, 2, 3, 4]
+  // 3 is not in the new array because it was present after the array in the list of arguments passed to the parameter
+  // therefore a 3 will not be returned in the new array even though it was in the original array because
+  // ([1, 2, 3, 4], 3))
+  // because it was also present outside the array and therefore, the instruction !args.includes(val)
+  // means those values that were not present in the array are the values set to be filtered out of the returned array 
+  // it won't make a difference what data type - number or string - it will run, but 
+  // it will match values to values precisely so it won't remove a number inside a string if the array doesn't contain the same number inside a string 
+  expect(removeFromArray([1, 2, 3], "1", 3)).toEqual([1, 2]); 
+  // it will ignore non-present values, because this part of the line
+  !args.includes(val)
+  // tells filter() to return a new array without them 
